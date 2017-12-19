@@ -1,0 +1,56 @@
+{
+  "HOME": {
+    "PAGE_TITLE": "NativeScript Dev Day EU"
+  },
+  "WORKSHOP": {
+    "PAGE_TITLE": "Workshop",
+    "HDR_VENUE": "Venue"
+  },
+  "CONFERENCE": {
+    "PAGE_TITLE": "Conference",
+    "HDR_SCHEDULE": "Schedule",
+    "HDR_VENUE": "Venue"
+  },
+  "SPEAKERS": {
+    "PAGE_TITLE": "Speakers"
+  },
+  "VENUES": {
+    "PAGE_TITLE": "Venues",
+    "HDR_WORKSHOP": "Workshop",
+    "HDR_CONFERENCE": "Conference"
+  },
+  "ABOUT": {
+    "PAGE_TITLE": "About",
+    "HDR_ORGANISER": "Organisers",
+    "TXT_ORGANISER_1": "Monique Bruins\n(Progress Software Europe BV)",
+    "TXT_ORGANISER_2": "Rowdy Rabouw\n(Nationale-Nederlanden)",
+    "HDR_DESIGN": "Design and development",
+    "TXT_DESIGN_1A": "Logo",
+    "TXT_DESIGN_1B":
+      "Michael Hastrich\n(Freelance front-end developer and web designer with 72/300)",
+    "TXT_DESIGN_2A": "App",
+    "TXT_DESIGN_2B":
+      "Rowdy Rabouw\n(Freelance webdeveloper with double-R webdevelopment)",
+    "HDR_COC": "Code of Conduct",
+    "TXT_COC_1":
+      "All attendees, speakers, sponsors and volunteers at our conference are required to agree with the following code of conduct. Organisers will enforce this code throughout the event. We expect cooperation from all participants to help ensure a safe environment for everybody.",
+    "TXT_COC_2":
+      "Our conference is dedicated to providing a harassment-free conference experience for everyone, regardless of gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, ethnicity, religion (or lack thereof), or technology choices. We do not tolerate harassment of conference participants in any form. Sexual language and imagery is not appropriate for any conference venue, including talks, workshops, parties, Twitter and other online media. Conference participants violating these rules may be sanctioned or expelled from the conference without a refund at the discretion of the conference organisers."
+  },
+  "FEEDBACK": {
+    "PAGE_TITLE": "Feedback",
+    "TXT_1":
+      "We value your questions, comments and remarks about our workshop, conference and app.",
+    "Q_NAME": "Name",
+    "Q_EMAIL": "E-mail",
+    "Q_FEEDBACK": "Questions/remarks",
+    "BTN_SEND": "Send feedback",
+    "MSG_THANKS": "Thank you for your feedback!"
+  },
+  "ALERTS": {
+    "NO_INTERNET":
+      "Unable to retrieve conference data from the server.\nMaybe an internet connection was unavailable.\n\nYou might not have the latest information.",
+    "ALL_FIElDS_REQUIRED": "Please fill out all the fields.\nThank you!",
+    "VALID_EMAIL": "Please use a valid e-mail address.\nThank you!"
+  }
+}

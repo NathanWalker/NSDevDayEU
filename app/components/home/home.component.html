@@ -1,0 +1,25 @@
+<ActionBar [title]="'HOME.PAGE_TITLE' | translate" class="actionbar"></ActionBar>
+
+<ScrollView class="page-wrapper">
+    <StackLayout>
+        <StackLayout class="picture-wrapper">
+            <Image class="logo-big" src="~/assets/images/nsdevdayeu.png"></Image>
+        </StackLayout>
+        <StackLayout class="page">
+            <StackLayout>
+                <Label class="geomanist-ultra" text="NativeScript" textWrap="true"></Label>
+                <Label class="geomanist-ultra" text="Dev Day EU" textWrap="true"></Label>
+            </StackLayout>
+
+            <FlexboxLayout flexWrap="wrap" justifyContent="space-around">
+                <Button class="button button-rounded" text="Workshop" [nsRouterLink]="['/workshop']"></Button>
+                <Button class="button button-rounded" text="Conference" [nsRouterLink]="['/conference']"></Button>
+                <Button class="button button-rounded" text="Speakers" [nsRouterLink]="['/speakers']"></Button>
+                <Button class="button button-rounded" text="Venues" [nsRouterLink]="['/venues']"></Button>
+                <Button class="button button-rounded" text="About" [nsRouterLink]="['/about']"></Button>
+                <Button class="button button-rounded" text="Feedback" [nsRouterLink]="['/feedback']"></Button>
+            </FlexboxLayout>
+
+        </StackLayout>
+    </StackLayout>
+</ScrollView>

@@ -1,0 +1,30 @@
+<ActionBar class="actionbar">
+    <NavigationButton visibility="collapsed"></NavigationButton>
+    <StackLayout>
+        <GridLayout columns="35 * 45">
+            <Label [text]="'fa-chevron-left' | fonticon" (tap)="goBack()" class="fa fa-actionbar center" col="0"></Label>
+            <Label [text]="'FEEDBACK.PAGE_TITLE' | translate" class="actionbar-title" col="1"></Label>
+        </GridLayout>
+    </StackLayout>
+</ActionBar>
+
+<ScrollView>
+    <StackLayout class="page-wrapper">
+
+        <Label class="text" [text]="'FEEDBACK.TXT_1' | translate" textWrap="true"></Label>
+
+        <Label class="text-question" [text]="'FEEDBACK.Q_NAME' | translate" textWrap="true"></Label>
+        <TextField [(ngModel)]="_name" class="text-input"></TextField>
+
+        <Label class="text-question" [text]="'FEEDBACK.Q_EMAIL' | translate" textWrap="true"></Label>
+        <TextField [(ngModel)]="_email" class="text-input" keyboardType="email" autocapitalizationType="none" autocorrect="false"></TextField>
+
+        <Label class="text-question" [text]="'FEEDBACK.Q_FEEDBACK' | translate" textWrap="true"></Label>
+        <TextView [(ngModel)]="_feedback" class="text-area"></TextView>
+
+        <Button [text]="'FEEDBACK.BTN_SEND' | translate" class="button button-primary" (tap)="sendFeedback()"></Button>
+
+
+
+    </StackLayout>
+</ScrollView>

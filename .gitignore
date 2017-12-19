@@ -1,0 +1,13 @@
+*.log
+**/*.js
+**/*.js.map
+.nsbuildinfo
+docs
+report
+hooks
+node_modules
+platforms/android
+platforms/ios
+app/tns_modules
+!webpack.config.js
+settings.txt

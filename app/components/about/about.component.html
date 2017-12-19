@@ -1,0 +1,34 @@
+<ActionBar class="actionbar">
+    <NavigationButton visibility="collapsed"></NavigationButton>
+    <StackLayout>
+        <GridLayout columns="35 * 45">
+            <Label [text]="'fa-chevron-left' | fonticon" (tap)="goBack()" class="fa fa-actionbar center" col="0"></Label>
+            <Label [text]="'ABOUT.PAGE_TITLE' | translate" class="actionbar-title" col="1"></Label>
+        </GridLayout>
+    </StackLayout>
+</ActionBar>
+
+<ScrollView>
+    <StackLayout class="page-wrapper">
+
+        <Label class="geomanist-ultra-small" [text]="'ABOUT.HDR_ORGANISER' | translate" textWrap="true"></Label>
+        <Label class="text" [text]="'ABOUT.TXT_ORGANISER_1' | translate" textWrap="true"></Label>
+        <Label class="text" [text]="'ABOUT.TXT_ORGANISER_2' | translate" textWrap="true"></Label>
+
+        <StackLayout class="hr"></StackLayout>
+
+        <Label class="geomanist-ultra-small" [text]="'ABOUT.HDR_DESIGN' | translate" textWrap="true"></Label>
+        <Label class="text-header" [text]="'ABOUT.TXT_DESIGN_1A' | translate" textWrap="true"></Label>
+        <Label class="text" [text]="'ABOUT.TXT_DESIGN_1B' | translate" textWrap="true"></Label>
+        <Label class="text-header" [text]="'ABOUT.TXT_DESIGN_2A' | translate" textWrap="true"></Label>
+        <Label class="text" [text]="'ABOUT.TXT_DESIGN_2B' | translate" textWrap="true"></Label>
+
+        <StackLayout class="hr"></StackLayout>
+
+        <Label class="geomanist-ultra-small" [text]="'ABOUT.HDR_COC' | translate" textWrap="true"></Label>
+        <Label class="text" [text]="'ABOUT.TXT_COC_1' | translate" textWrap="true"></Label>
+        <Label class="text" [text]="'ABOUT.TXT_COC_2' | translate" textWrap="true"></Label>
+
+
+    </StackLayout>
+</ScrollView>

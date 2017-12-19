@@ -1,0 +1,35 @@
+<ActionBar class="actionbar">
+    <NavigationButton visibility="collapsed"></NavigationButton>
+    <StackLayout>
+        <GridLayout columns="35 * 45">
+            <Label [text]="'fa-chevron-left' | fonticon" (tap)="goBack()" class="fa fa-actionbar center" col="0"></Label>
+            <Label text="{{speaker.name}}" class="actionbar-title" col="1"></Label>
+        </GridLayout>
+    </StackLayout>
+</ActionBar>
+
+<ScrollView>
+    <StackLayout class="page-wrapper">
+        <Image class="avatar avatar--big" src="{{speaker.image}}"></Image>
+        <Label class="text pt-10" text="{{speaker.bio}}" textWrap="true"></Label>
+
+        <StackLayout class="list">
+            <StackLayout *ngFor="let session of sessions">
+                <GridLayout class="list-item" columns="* 25" [nsRouterLink]="['/session', session.id]">
+                    <Label class="text" [text]="session.title" textWrap="true" col="0" verticalAlignment="center"></Label>
+                    <Label [text]="'fa-chevron-right' | fonticon" col="1" class="fa right" verticalAlignment="center"></Label>
+                </GridLayout>
+            </StackLayout>
+        </StackLayout>
+
+        <FlexboxLayout class="pt-10" flexWrap="wrap" justifyContent="space-around" verticalAlignment="center">
+            <Button *ngIf="speaker.twitter" [text]="'fa-twitter' | fonticon" class="fa fa-icon button-rounded button-small center" col="0"
+                url="{{speaker.twitter}}" (tap)="openUrl($event)"></Button>
+            <Button *ngIf="speaker.website" [text]="'fa-globe' | fonticon" class="fa fa-icon button-rounded button-small center" col="1"
+                url="{{speaker.website}}" (tap)="openUrl($event)"></Button>
+            <Button *ngIf="speaker.github" [text]="'fa-github' | fonticon" class="fa fa-icon button-rounded button-small center" col="2"
+                url="{{speaker.github}}" (tap)="openUrl($event)"></Button>
+        </FlexboxLayout>
+
+    </StackLayout>
+</ScrollView>

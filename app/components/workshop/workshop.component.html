@@ -1,0 +1,49 @@
+<ActionBar class="actionbar">
+    <NavigationButton visibility="collapsed"></NavigationButton>
+    <StackLayout>
+        <GridLayout columns="35 * 45">
+            <Label [text]="'fa-chevron-left' | fonticon" (tap)="goBack()" class="fa fa-actionbar center" col="0"></Label>
+            <Label [text]="'WORKSHOP.PAGE_TITLE' | translate" class="actionbar-title" col="1"></Label>
+        </GridLayout>
+    </StackLayout>
+</ActionBar>
+
+<ScrollView>
+    <StackLayout class="page-wrapper">
+
+        <GridLayout rows="*" columns="auto, *">
+            <Label class="geomanist-bold header" text="{{event.date}}" row="0" col="0"></Label>
+            <Label class="geomanist-bold header" text="{{event.start}} - {{event.end}}" row="0" col="1" horizontalAlignment="right"></Label>
+        </GridLayout>
+
+        <StackLayout class="pt-10">
+            <Label class="geomanist-ultra-small" text="{{session.title}}" textWrap="true"></Label>
+            <Label class="text" text="{{session.description}}" textWrap="true"></Label>
+        </StackLayout>
+
+        <StackLayout *ngFor="let speaker of speakers">
+            <GridLayout class="pt-10 pb-10" columns="90, *">
+                <Image class="avatar" src="{{speaker.image}}" col="0" verticalAlignment="center"></Image>
+                <Label class="geomanist-ultra-small pl-10" text="{{speaker.name}}" textWrap="true" col="1" verticalAlignment="center"></Label>
+            </GridLayout>
+            <StackLayout>
+                <Label class="text" text="{{speaker.bio}}" textWrap="true"></Label>
+            </StackLayout>
+        </StackLayout>
+
+        <StackLayout class="pt-10">
+            <Label class="geomanist-ultra-small" [text]="'WORKSHOP.HDR_VENUE' | translate" textWrap="true"></Label>
+        </StackLayout>
+        <GridLayout columns="2*, *">
+            <StackLayout col="0" class="text">
+                <Label text="{{venue.name}}" textWrap="true"></Label>
+                <Label text="{{venue.address}}" textWrap="true"></Label>
+                <Label text="{{venue.zipcode}} {{venue.city}}" textWrap="true"></Label>
+                <Label text="{{venue.country}}" textWrap="true"></Label>
+            </StackLayout>
+            <Button col="1" [text]="'fa-map-marker' | fonticon" class="fa fa-icon button-rounded button-small center" [nsRouterLink]="['/map', venue.id]"
+                verticalAlignment="top"></Button>
+        </GridLayout>
+
+    </StackLayout>
+</ScrollView>

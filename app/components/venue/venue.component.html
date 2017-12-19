@@ -1,0 +1,48 @@
+<ActionBar class="actionbar">
+    <NavigationButton visibility="collapsed"></NavigationButton>
+    <StackLayout>
+        <GridLayout columns="35 * 45">
+            <Label [text]="'fa-chevron-left' | fonticon" (tap)="goBack()" class="fa fa-actionbar center" col="0"></Label>
+            <Label [text]="'VENUES.PAGE_TITLE' | translate" class="actionbar-title" col="1"></Label>
+        </GridLayout>
+    </StackLayout>
+</ActionBar>
+
+<ScrollView>
+    <StackLayout class="page-wrapper">
+
+        <Image class="avatar avatar--big" src="{{venue_workshop.image}}"></Image>
+
+        <GridLayout cols="*, *" class="pt-10">
+            <Label col="0" class="geomanist-ultra-small" [text]="'VENUES.HDR_WORKSHOP' | translate" textWrap="true"></Label>
+            <Label col="1" class="text" text="{{event_workshop.date}}" textWrap="true" horizontalAlignment="right"></Label>
+        </GridLayout>
+        <GridLayout columns="2*, *">
+            <StackLayout col="0" class="text">
+                <Label text="{{venue_workshop.name}}" textWrap="true"></Label>
+                <Label text="{{venue_workshop.address}}" textWrap="true"></Label>
+                <Label text="{{venue_workshop.zipcode}} {{venue_workshop.city}}" textWrap="true"></Label>
+                <Label text="{{venue_workshop.country}}" textWrap="true"></Label>
+            </StackLayout>
+            <Button col="1" [text]="'fa-map-marker' | fonticon" class="fa fa-icon button-rounded button-small center" [nsRouterLink]="['/map', venue_workshop.id]"
+                verticalAlignment="top"></Button>
+        </GridLayout>
+
+        <Image class="avatar avatar--big" src="{{venue_conference.image}}"></Image>
+
+        <GridLayout cols="*, *" class="pt-10">
+            <Label col="0" class="geomanist-ultra-small" [text]="'VENUES.HDR_CONFERENCE' | translate" textWrap="true"></Label>
+            <Label col="1" class="text" text="{{event_conference.date}}" textWrap="true" horizontalAlignment="right"></Label>
+        </GridLayout>
+        <GridLayout columns="2*, *">
+            <StackLayout col="0" class="text">
+                <Label text="{{venue_conference.name}}" textWrap="true"></Label>
+                <Label text="{{venue_conference.address}}" textWrap="true"></Label>
+                <Label text="{{venue_conference.zipcode}} {{venue_conference.city}}" textWrap="true"></Label>
+                <Label text="{{venue_conference.country}}" textWrap="true"></Label>
+            </StackLayout>
+            <Button col="1" [text]="'fa-map-marker' | fonticon" class="fa fa-icon button-rounded button-small center" [nsRouterLink]="['/map', venue_conference.id]"></Button>
+        </GridLayout>
+
+    </StackLayout>
+</ScrollView>
