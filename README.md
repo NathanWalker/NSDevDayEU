@@ -1,4 +1,4 @@
-#NativeScript Developers Day EU 2017
+# NativeScript Developers Day EU 2017
 
 ## app/shared/config.ts
 
