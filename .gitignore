@@ -1,6 +1,7 @@
 *.log
 **/*.js
 **/*.js.map
+app/**/*.css
 .nsbuildinfo
 docs
 report
@@ -11,3 +12,4 @@ platforms/ios
 app/tns_modules
 !webpack.config.js
 settings.txt
+package-lock.json

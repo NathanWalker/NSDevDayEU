@@ -20,7 +20,7 @@
         <TextField [(ngModel)]="_email" class="text-input" keyboardType="email" autocapitalizationType="none" autocorrect="false"></TextField>
 
         <Label class="text-question" [text]="'FEEDBACK.Q_FEEDBACK' | translate" textWrap="true"></Label>
-        <TextView [(ngModel)]="_feedback" class="text-area"></TextView>
+        <!-- <TextView [(ngModel)]="_feedback" class="text-area"></TextView> -->
 
         <Button [text]="'FEEDBACK.BTN_SEND' | translate" class="button button-primary" (tap)="sendFeedback()"></Button>
 

@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { TranslateService } from "@ngx-translate/core";
-import { topmost } from "ui/frame";
+import { topmost } from "tns-core-modules/ui/frame";
 
 // Declare these so the TypeScript compiler doesn’t complain about these references.
 declare var UIImage: any;

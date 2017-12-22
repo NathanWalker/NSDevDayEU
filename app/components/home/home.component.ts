@@ -7,15 +7,15 @@ import { TranslateService } from "@ngx-translate/core";
 
 import { AnalyticsService } from "../../services/analytics.service";
 
-import * as dialogs from "ui/dialogs";
-import { Page } from "ui/page";
-import { setString, getString } from "application-settings";
+import * as dialogs from "tns-core-modules/ui/dialogs";
+import { Page } from "tns-core-modules/ui/page";
+import { setString, getString } from "tns-core-modules/application-settings";
 
 import { Config } from "../../shared/config";
 import * as appversion from "nativescript-appversion";
-import { isIOS, device, screen } from "platform";
+import { isIOS, device, screen } from "tns-core-modules/platform";
 
-let Http = require("http");
+import * as Http from 'tns-core-modules/http';
 
 @Component({
   moduleId: module.id,
@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
     private router: Router,
     private translateService: TranslateService,
     private analyticsService: AnalyticsService
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.page.actionBarHidden = true;
@@ -90,7 +90,7 @@ export class HomeComponent implements OnInit {
         "X-Version": lVersion
       }
     }).then(
-      function(response) {
+      function (response) {
         // console.log(response.statusCode);
         switch (response.statusCode) {
           case 200:
@@ -109,7 +109,7 @@ export class HomeComponent implements OnInit {
             dialogs.alert(lMessage);
         }
       },
-      function(e) {
+      function (e) {
         // error occured, load default data if none available
         // console.log(e);
         if (getString("dataJson") === undefined) {
@@ -119,7 +119,7 @@ export class HomeComponent implements OnInit {
         }
         dialogs.alert(lMessage);
       }
-    );
+      );
   }
 
   goToPage(url: string) {
